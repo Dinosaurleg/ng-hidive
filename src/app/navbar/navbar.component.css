@@ -1,0 +1,17 @@
+.navbar {
+  background-color: rgba(0,0,0,0.85);
+  box-shadow: 4px 4px 6px rgba(0,0,0,.5);
+  font-size: 13px;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.vert-divider {
+  color: white;
+}
+
+.right-text {
+  font-size: 13px;
+}
