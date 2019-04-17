@@ -1,4 +1,4 @@
-<div>
+<div class="carousel-div">
   <h1>{{carouselName}}</h1>
   <div id="carousel-{{name}}" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -7,10 +7,12 @@
       <li attr.data-target="#carousel-{{name}}" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item">
+      <div class="carousel-item active">
         <div class="row">
           <ng-container *ngFor="let show of shows">
-            <img src="{{show.KeyArtUrl}}" height="50" width="50">
+            <div class="col">
+              <img class="d-block w-100" src="{{show.KeyArtUrl}}">
+            </div>
           </ng-container>
         </div>
       </div>
