@@ -48,6 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public ngOnInit() {
     this.splitData();
+    console.log(this.dataObjects, this.wantedData);
   }
 
   public splitData() {
@@ -63,7 +64,6 @@ export class AppComponent implements OnInit, OnDestroy {
         return group.Name === 'Continue Watching';
       });
     });
-    console.log(this.dataObjects);
   }
 
   public ngOnDestroy() {
