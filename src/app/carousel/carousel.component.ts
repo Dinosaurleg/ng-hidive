@@ -27,8 +27,6 @@ export class CarouselComponent implements OnInit {
     this.name = this.carouselName.toLowerCase().replace(/\s+/g, '');
     this.carouselName = this.carouselName.toUpperCase();
     this.modData();
-    // console.log(this.catLength, this.carouselName);
-    // console.log(this.dataToUse);
   }
 
   public modData() {
@@ -54,6 +52,5 @@ export class CarouselComponent implements OnInit {
 
   public setSelectedShow(show: any) {
     this.selectedShow = show;
-    console.log(this.selectedShow);
   }
 }
