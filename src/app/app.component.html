@@ -1,9 +1,42 @@
 <app-navbar></app-navbar>
-<body>
-  <div *ngFor="let key of Object.keys(dataObjects)">
-    <app-carousel
-    [carousel-name]="key"
-    [data]="dataObjects[key]"
-    ></app-carousel>
+<div class="big-carousel"></div>
+<div *ngFor="let key of Object.keys(dataObjects)">
+  <app-carousel
+  [carousel-name]="key"
+  [data]="dataObjects[key]"
+  ></app-carousel>
+</div>
+<footer>
+  <div class="row">
+    <div class="col-md-9">
+      <ul id="footer-list">
+        <li><a href="javascript:void(0);">Sign Up</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Help Center</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">About Us</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Contact Us</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Careers</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Privacy Policy</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Terms of Use</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Press</a></li>
+        <li class="my-auto">|</li>
+        <li><a href="javascript:void(0);">Devices</a></li>
+      </ul>
+      <ul class="footer-list">
+        <li>HIDIVE and the logos ™ and © HIDIVE, LLC.</li>
+      </ul>
+    </div>
+    <div class="footer-list col-md-3 footer-right-side ml-auto">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+    </div>
   </div>
-</body>
+</footer>

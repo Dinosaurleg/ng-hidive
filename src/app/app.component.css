@@ -3,3 +3,21 @@ body {
   background-image: url("https://d10xkldqejj5hr.cloudfront.net/content/images/HD_sitebackimage_5_poster3_compressed.jpg");
   background-attachment: fixed;
 }
+
+footer {
+  color: #BFBFBF;
+  background: rgba(41, 42, 44, 0.95);
+  font-size: 1em;
+}
+
+#footer-list > li {
+  display: inline;
+}
+
+#footer-list > li > a {
+  color: #BFBFBF !important;
+}
+
+.footer-right-side > a > i {
+  color: #BFBFBF !important;
+}
