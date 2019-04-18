@@ -9,6 +9,31 @@
   margin-bottom: 50px;
 }
 
+.big-carousel {
+  margin-bottom: 50px;
+}
+
+.carousel-indicators {
+  bottom: -70px;
+  height: 10%;
+}
+
+.carousel-control-next-icon {
+  margin-right: -85px;
+  width: 30%;
+  height: 30%;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -85px;
+  width: 30%;
+  height: 30%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 10%;
+}
+
 .small-car-container {
   margin-bottom: 20px;
 }
