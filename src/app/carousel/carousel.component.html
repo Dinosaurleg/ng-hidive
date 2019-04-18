@@ -18,22 +18,6 @@
               </div>
             </ng-container>
           </div>
-          <div class="collapse" id="collapse-{{selectedShow.Id}}" *ngIf="selectedShow">
-            <div class="card card-body">
-              <div class="row">
-                <div class="col">
-                  <a href="javascript:void(0);">{{selectedShow.Name}}</a>
-                  <p id="season-name">{{selectedShow.SeasonName}}</p>
-                  <div class="row">
-                    <span class="badge badge-info">ADD TO QUEUE</span>
-                    <span class="badge badge-info">ADD FAVORITE</span>
-                  </div>
-                  <p id="synop">{{selectedShow.LongSynopsis}}</p>
-                </div>
-                <div class="col"><img src="{{selectedShow.MasterArtUrl}}"></div>
-              </div>
-            </div>
-          </div>
         </div>
         <ng-template #notActive>
           <div class="carousel-item">
@@ -45,22 +29,6 @@
                   </a>
                 </div>
               </ng-container>
-            </div>
-            <div class="collapse" id="collapse-{{selectedShow.Id}}" *ngIf="selectedShow">
-              <div class="card card-body">
-                <div class="row">
-                  <div class="col">
-                    <a href="javascript:void(0);">{{selectedShow.Name}}</a>
-                    <p id="season-name">{{selectedShow.SeasonName}}</p>
-                    <div class="row">
-                      <span class="badge badge-info">ADD TO QUEUE</span>
-                      <span class="badge badge-info">ADD FAVORITE</span>
-                    </div>
-                    <p id="synop">{{selectedShow.LongSynopsis}}</p>
-                  </div>
-                  <div class="col"><img src="{{selectedShow.MasterArtUrl}}"></div>
-                </div>
-              </div>
             </div>
           </div>
         </ng-template>
@@ -74,5 +42,21 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
+  <div class="collapse" id="collapse-{{selectedShow.Id}}" *ngIf="selectedShow">
+    <div class="card card-body">
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0);">{{selectedShow.Name}}</a>
+          <p id="season-name">{{selectedShow.SeasonName}}</p>
+          <div class="row span-badges">
+            <span class="badge badge-info">ADD TO QUEUE</span>
+            <span class="badge badge-info">ADD FAVORITE</span>
+          </div>
+          <p id="synop">{{selectedShow.LongSynopsis}}</p>
+        </div>
+        <div class="col"><img src="{{selectedShow.MasterArtUrl}}"></div>
+      </div>
+    </div>
   </div>
 </div>

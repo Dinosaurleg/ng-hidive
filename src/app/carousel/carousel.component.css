@@ -35,6 +35,11 @@ h1 {
   color: white;
 }
 
+.span-badges {
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
 .carousel-indicators {
   top: -20px;
   margin-right: -840px;
