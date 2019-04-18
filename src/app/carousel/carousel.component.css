@@ -1,4 +1,55 @@
+.carousel-div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 h1 {
   color: rgba(150,150,150,1);
   font-size: 24px;
+}
+
+.carousel-item > .row > .col {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.card-body {
+  background-color: black;
+  opacity: 1;
+}
+
+.card-body > .row > .col > a {
+  color: rgba(0,174,240,1);
+  font-size: 36px;
+}
+
+.card-body > .row > .col > img {
+  width: 100%;
+}
+
+#season-name {
+  color: rgba(150,150,150,1);
+}
+
+#synop {
+  color: white;
+}
+
+.carousel-indicators {
+  top: -20px;
+  margin-right: -840px;
+  height: 10%;
+}
+
+.carousel-control-next-icon {
+  margin-right: -10px;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -10px;
+  height: 26%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 1%;
 }

@@ -16,9 +16,9 @@ export class CarouselComponent implements OnInit {
   public catLength: number;
 
   public dataToUse: any = [];
-
   public shows: any = [];
   public name: string = '';
+  public selectedShow: any;
 
   constructor() { }
 
@@ -52,4 +52,8 @@ export class CarouselComponent implements OnInit {
     }
   }
 
+  public setSelectedShow(show: any) {
+    this.selectedShow = show;
+    console.log(this.selectedShow);
+  }
 }
