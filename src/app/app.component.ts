@@ -23,7 +23,22 @@ export class AppComponent implements OnInit, OnDestroy {
     'Like Saiyuki Gaiden',
     'Most Popular',
   ];
+  public wantedData = [
+    'Free Episodes',
+    'Simulcasts',
+    'Dubs',
+    'Exclusives',
+    'Recently Added',
+    'Trending Now',
+    'Most Popular'
+  ];
   public dataObjects: any = {};
+
+  public bigCarouselImages: any = [
+    "d10xkldqejj5hr.cloudfront.net/slides/2019/03/HIDIVE_HOMEcarousel_PastelMem3_IOS_idea.png",
+    "d10xkldqejj5hr.cloudfront.net/slides/2019/04/HIDIVE_HOMEcarousel_Spring2019_1250x500_Fish.png",
+    "d10xkldqejj5hr.cloudfront.net/slides/2019/01/HIDIVE_HOMEcarousel_20percentOff_Promo UPDATED.gif",
+  ];
 
   private subs: Subscription[] = [];
 
@@ -36,13 +51,17 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   public splitData() {
-    this.dataNames.forEach((topic) => {
-      this.dataService.getData().subscribe((data) => {
+    this.dataService.getData().subscribe((data) => {
+      this.wantedData.forEach((topic) => {
         this.dataObjects[topic] = data.Data.TitleRows.find((group) => {
           return group.Name === topic;
         });
       });
+      this.dataObjects['Free Episodes'] = data.Data.TitleRows.find((group) => {
+        return group.Name === 'Continue Watching';
+      });
     });
+    console.log(this.dataObjects);
   }
 
   public ngOnDestroy() {

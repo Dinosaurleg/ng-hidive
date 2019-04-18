@@ -7,15 +7,17 @@
       <li attr.data-target="#carousel-{{name}}" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="row">
-          <ng-container *ngFor="let show of shows">
-            <div class="col">
-              <img class="d-block w-100" src="{{show.KeyArtUrl}}">
-            </div>
-          </ng-container>
+      <ng-container *ngFor="let group of dataToUse">
+        <div class="carousel-item active">
+          <div class="row">
+            <ng-container *ngFor="let show of group">
+              <div class="col">
+                <img class="d-block w-100" src="{{show.KeyArtUrl}}">
+              </div>
+            </ng-container>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
     <a class="carousel-control-prev" attr.href="#carousel-{{name}}" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

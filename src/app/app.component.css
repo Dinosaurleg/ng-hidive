@@ -1,7 +1,5 @@
-body {
-  height: 100vh;
-  background-image: url("https://d10xkldqejj5hr.cloudfront.net/content/images/HD_sitebackimage_5_poster3_compressed.jpg");
-  background-attachment: fixed;
+.big-carousel {
+  top: 500px;
 }
 
 footer {
