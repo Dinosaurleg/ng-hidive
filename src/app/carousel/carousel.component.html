@@ -1,22 +1,49 @@
 <div class="carousel-div">
   <h1>{{carouselName}}</h1>
-  <div id="carousel-{{name}}" class="carousel slide" data-ride="carousel">
+  <div id="carousel-{{name}}" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
       <li attr.data-target="#carousel-{{name}}" data-slide-to="0" class="active"></li>
       <li attr.data-target="#carousel-{{name}}" data-slide-to="1"></li>
       <li attr.data-target="#carousel-{{name}}" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <ng-container *ngFor="let group of dataToUse">
-        <div class="carousel-item active">
+      <ng-container *ngFor="let group of dataToUse; let i = index;">
+        <div class="carousel-item active" *ngIf="i === 1; else notActive">
           <div class="row">
             <ng-container *ngFor="let show of group">
               <div class="col">
                 <img class="d-block w-100" src="{{show.KeyArtUrl}}">
+                <a class="btn btn-primary" data-toggle="collapse" attr.href="#collapse-{{show.Id}}" role="button" aria-expanded="false" attr.aria-controls="collapse-{{show.Id}}">
+                  Link with href
+                </a>
+              </div>
+              <div class="collapse" id="collapse-{{show.Id}}">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
               </div>
             </ng-container>
           </div>
         </div>
+        <ng-template #notActive>
+          <div class="carousel-item">
+            <div class="row">
+              <ng-container *ngFor="let show of group">
+                <div class="col" attr.href="#collsape-{{show.Id}}" role="button" aria-expanded="false" attr.aria-controls="collsape-{{show.Id}}">
+                  <img class="d-block w-100" src="{{show.KeyArtUrl}}">
+                  <a class="btn btn-primary" data-toggle="collapse" attr.href="#collapse-{{show.Id}}" role="button" aria-expanded="false" attr.aria-controls="collapse-{{show.Id}}">
+                    Link with href
+                  </a>
+                </div>
+                <div class="collapse" id="collapse-{{show.Id}}">
+                  <div class="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </ng-template>
       </ng-container>
     </div>
     <a class="carousel-control-prev" attr.href="#carousel-{{name}}" role="button" data-slide="prev">

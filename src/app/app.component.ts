@@ -53,9 +53,11 @@ export class AppComponent implements OnInit, OnDestroy {
   public splitData() {
     this.dataService.getData().subscribe((data) => {
       this.wantedData.forEach((topic) => {
-        this.dataObjects[topic] = data.Data.TitleRows.find((group) => {
-          return group.Name === topic;
-        });
+        if (topic !== 'Free Episodes') {
+          this.dataObjects[topic] = data.Data.TitleRows.find((group) => {
+            return group.Name === topic;
+          });
+        }
       });
       this.dataObjects['Free Episodes'] = data.Data.TitleRows.find((group) => {
         return group.Name === 'Continue Watching';
