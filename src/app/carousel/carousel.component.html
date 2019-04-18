@@ -3,8 +3,8 @@
   <div id="carousel-{{name}}" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
       <li attr.data-target="#carousel-{{name}}" data-slide-to="0" class="active"></li>
-      <li attr.data-target="#carousel-{{name}}" data-slide-to="1"></li>
-      <li attr.data-target="#carousel-{{name}}" data-slide-to="2"></li>
+      <li attr.data-target="#carousel-{{name}}" data-slide-to="1" *ngIf="dataToUse.length > 1"></li>
+      <li attr.data-target="#carousel-{{name}}" data-slide-to="2" *ngIf="dataToUse.length > 2"></li>
     </ol>
     <div class="carousel-inner">
       <ng-container *ngFor="let group of dataToUse; let i = index;">
